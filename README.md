@@ -21,7 +21,7 @@ Dataset de 60 registros generado de forma sintética dentro del propio notebook 
 
 - Correlación fuerte entre sesiones de enfoque y productividad percibida: **r = 0.878** (p < 0.001).
 - El modelo de regresión lineal explica el **83.2%** de la variabilidad de la productividad (R² = 0.832, MAE = 0.68).
-- El modelo de clasificación logística tuvo bajo desempeño (accuracy = 41.7%), sesgado hacia la clase mayoritaria. Esto se documenta como un hallazgo válido: con una muestra de 60 registros no hay masa crítica suficiente para estabilizar un clasificador con múltiples variables categóricas — una limitación real del proyecto, no un error oculto.
+- El modelo de clasificación logística tuvo bajo desempeño (accuracy = 41.7%): predijo la clase mayoritaria para todos los casos de prueba. La variable objetivo (uso de técnicas de productividad) se generó al azar, sin relación con las demás variables, por lo que no hay señal que aprender; el tamaño de la muestra (60 registros) refuerza esa limitación.
 
 ## Herramientas
 
