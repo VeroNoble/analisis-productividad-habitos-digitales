@@ -12,7 +12,7 @@ Dataset de 60 registros generado de forma sintética dentro del propio notebook 
 
 ## Enfoque
 
-1. **Limpieza y preparación**: estandarización de nombres de columnas, verificación de nulos/duplicados, detección de outliers (regla de 3 desvíos estándar) y creación de variables derivadas (`Indice_Enfoque`, `Segmento_Edad`).
+1. **Limpieza y preparación**: verificación de nulos, duplicados y categorías, detección de outliers (regla de 3 desvíos estándar) y creación de variables derivadas (`Indice_Enfoque`, `Segmento_Edad`).
 2. **Análisis exploratorio (EDA)**: 6 visualizaciones (distribución de productividad, sesiones de enfoque vs. productividad, densidad de horas de pantalla, impacto de distractores, eficiencia por segmento etario, adopción de técnicas por ocupación).
 3. **Estadística inferencial**: medidas de tendencia central y dispersión, probabilidad simple y condicional, prueba de hipótesis con correlación de Pearson entre sesiones de enfoque y productividad.
 4. **Modelado**: un modelo de regresión lineal (predice productividad) y uno de clasificación logística (predice uso de técnicas de productividad), con partición 80/20 y evaluación de métricas.
@@ -20,7 +20,7 @@ Dataset de 60 registros generado de forma sintética dentro del propio notebook 
 ## Resultados
 
 - Correlación fuerte entre sesiones de enfoque y productividad percibida: **r = 0.878** (p < 0.001).
-- El modelo de regresión lineal explica el **83.2%** de la variabilidad de la productividad (R² = 0.832, MAE = 0.68).
+- El modelo de regresión lineal explica el **83.2%** de la variabilidad de la productividad (R² = 0.832, MAE = 0.68). Es un resultado esperable: la productividad se generó a partir de las sesiones de enfoque y las horas de pantalla, y el modelo recupera esa relación.
 - El modelo de clasificación logística tuvo bajo desempeño (accuracy = 41.7%): predijo la clase mayoritaria para todos los casos de prueba. La variable objetivo (uso de técnicas de productividad) se generó al azar, sin relación con las demás variables, por lo que no hay señal que aprender; el tamaño de la muestra (60 registros) refuerza esa limitación.
 
 ## Herramientas
